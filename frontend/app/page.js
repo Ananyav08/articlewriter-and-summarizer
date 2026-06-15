@@ -168,12 +168,28 @@ export default function Home() {
         password: regPassword,
       });
       showToast(res.data.message || "Account created successfully!", "success");
-      setView("login");
+      
+      // Auto-login after successful registration
+      const loginRes = await axios.post("http://localhost:5000/api/auth/login", {
+        email: regEmail,
+        password: regPassword,
+      });
+      
+      localStorage.setItem("token", loginRes.data.token);
+      setToken(loginRes.data.token);
+      setView("dashboard");
+      showToast("Welcome! Account created and logged in.", "success");
+      
+      // Clear registration form
       setName("");
       setRegEmail("");
       setRegPassword("");
     } catch (err) {
-      showToast(err.response?.data?.message || "Registration failed.", "error");
+      if (err.response?.data?.message) {
+        showToast(err.response.data.message, "error");
+      } else {
+        showToast("Registration failed. Please try again.", "error");
+      }
     }
   };
 
