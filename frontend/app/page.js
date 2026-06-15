@@ -1,21 +1,3 @@
-// frontend/app/page.js
-
-export default async function Home() {
-  // ✅ Environment variable is read here
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
-  // ✅ Fetch data from your Render backend
-  const res = await fetch(`${apiUrl}/_/backend/api`);
-  const data = await res.json();
-
-  return (
-    <main>
-      <h1>Data from Backend</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </main>
-  );
-}
-
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
