@@ -1,3 +1,4 @@
+// backend/server.js
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -5,39 +6,36 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+// Routes
 const authRoutes = require("./routes/authRoutes");
 const articleRoutes = require("./routes/articleRoutes");
 const aiRoutes = require("./routes/aiRoutes");
 
 const app = express();
 
-// Configured CORS properly for production & development
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://articlewriter-and-summarizer.vercel.app" // Replace with your exact frontend URL
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
-
+// Middlewares
+app.use(cors());
 app.use(express.json());
 
-// API Routes
+// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/articles", articleRoutes);
 app.use("/api/ai", aiRoutes);
 
-// Base route to verify server deployment status
-app.get("/", (req, res) => {
-  res.status(200).json({ status: "Backend Running Successfully" });
-});
-
-// Database Connection
+// MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log("MongoDB connection error:", err));
+  .catch((err) => console.log(err));
 
-// Export for Vercel Serverless environment
-module.exports = app;
+// Home Route
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully");
+});
+
+// Server
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
