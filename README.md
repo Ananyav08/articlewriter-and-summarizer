@@ -1,7 +1,5 @@
 
-<h1 align="center">✨ InkWell-AI Article Writer & Summarizer 
-
-✨</h1>
+<h1 align="center">✨ InkWell-AI Article Writer & Summarizer ✨</h1>
 
 
 Live Demo💥
@@ -74,11 +72,13 @@ Authentication
 JWT (JSON Web Token)
 AI Integration
 Google Gemini API / OpenAI API
-How It Works
-Users create an account and log in securely.
-Users generate articles using AI-powered content generation.
-Existing articles can be summarized instantly.
-Articles are stored in MongoDB for persistence.
-Elasticsearch indexes articles for lightning-fast search.
-Redis caches frequently accessed data to improve application performance.
-Users can view, search, and manage their saved articles through a centralized dashboard.
+## How It Works
+
+* Secure user registration and authentication using JWT.
+* AI-powered article generation from user-provided prompts.
+* Instant article summarization for quick content understanding.
+* Persistent article storage using MongoDB.
+* Fast full-text search enabled through Elasticsearch indexing.
+* Redis caching for improved performance and reduced database load.
+* Dashboard for viewing, searching, and managing saved articles.
+* REST APIs connect the frontend, backend, AI services, and data storage systems.
