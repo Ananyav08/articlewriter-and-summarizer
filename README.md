@@ -84,7 +84,7 @@ npm run dev
 * ✨ Google Gemini API
 
 
-*## How It Works
+How It Works
 
 * 🔐 Users create an account and log in securely using JWT authentication.
 * ✍️ Generate high-quality articles through AI-powered content generation.
