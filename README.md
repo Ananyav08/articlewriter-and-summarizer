@@ -1,3 +1,4 @@
+
 <h1 align="center">✨ InkWell-AI Article Writer & Summarizer 
 
 ✨</h1>
@@ -5,7 +6,7 @@
 
 Live Demo💥
 
-<video src="https://github.com/user-attachments/assets/622883dd-a4cd-464c-af55-d46a1395639e" controls width="600">
+<video src="https://github.com/user-attachments/assets/98ed75d9-2d34-4f1a-aa4a-f97777cfb58a" controls width="600">
 </video>
 
 Highlights:
