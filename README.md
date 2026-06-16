@@ -82,7 +82,7 @@ npm run dev
 ### 🤖 AI Integration
 
 * ✨ Google Gemini API
-* 🧠 OpenAI API
+
 
 *## How It Works
 
