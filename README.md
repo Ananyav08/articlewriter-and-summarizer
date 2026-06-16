@@ -54,31 +54,43 @@ npm install
 npm run dev
 ```
 
-Tech Stack
-Frontend
-Next.js
-React.js
-Tailwind CSS
-Axios
-Backend
-Node.js
-Express.js
-MongoDB
-Mongoose
-Search & Caching
-Elasticsearch
-Redis
-Authentication
-JWT (JSON Web Token)
-AI Integration
-Google Gemini API / OpenAI API
-## How It Works
+## 🛠️ Tech Stack
 
-* Secure user registration and authentication using JWT.
-* AI-powered article generation from user-provided prompts.
-* Instant article summarization for quick content understanding.
-* Persistent article storage using MongoDB.
-* Fast full-text search enabled through Elasticsearch indexing.
-* Redis caching for improved performance and reduced database load.
-* Dashboard for viewing, searching, and managing saved articles.
-* REST APIs connect the frontend, backend, AI services, and data storage systems.
+### 🎨 Frontend
+
+* ⚛️ React.js
+* ▲ Next.js
+* 🎨 Tailwind CSS
+* 🔄 Axios
+
+### ⚙️ Backend
+
+* 🟢 Node.js
+* 🚀 Express.js
+* 🍃 MongoDB
+* 📦 Mongoose
+
+### 🔍 Search & Caching
+
+* 🔎 Elasticsearch
+* ⚡ Redis
+
+### 🔐 Authentication
+
+* 🛡️ JWT (JSON Web Token)
+
+### 🤖 AI Integration
+
+* ✨ Google Gemini API
+* 🧠 OpenAI API
+
+*## How It Works
+
+* 🔐 Users create an account and log in securely using JWT authentication.
+* ✍️ Generate high-quality articles through AI-powered content generation.
+* 📄 Summarize lengthy articles instantly for quick understanding.
+* 🗄️ Store articles persistently in MongoDB.
+* 🔍 Search articles efficiently with Elasticsearch indexing.
+* ⚡ Improve performance using Redis caching for frequently accessed data.
+* 📚 View, search, and manage saved articles from a centralized dashboard.
+* 🔗 REST APIs seamlessly connect the frontend, backend, AI services, and databases.
